@@ -15,14 +15,11 @@ export const SocketContextProvider = ({ children }) => {
 
   useEffect(() => {
     if (authUser) {
-      const socket = io(
-        "https://real-time-chat-app-by-sandip-chavda.onrender.com",
-        {
-          query: {
-            userId: authUser._id,
-          },
-        }
-      );
+      const socket = io("https://real-time-chatapp-4xxf.onrender.com", {
+        query: {
+          userId: authUser._id,
+        },
+      });
 
       setSocket(socket);
 
